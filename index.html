@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="enabler.js" defer></script>
+</head>
+<body>
+    <header style="width:100%; height:50px; font-size: xx-large; background-color: #2d0fd5; text-align: center; color: white; margin-bottom: 25px;">Save the Date!</header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xxl-4 col-lg-6 col-md-12">
+                <div style="width: 100%; height: 30px; background-color:#2d0fd5; font-size: large; text-align:center; border: 2px solid #000F5D; color: white">When and Where?</div>
+                <div class="accordion" id="accordionExam">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What date is the final exam?</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="Date" data-bs-parent="#accordionExam">
+                            <div class="accordion-body">The final exam is on Wednesday, May 1st</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What time is the final exam?</button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="Time" data-bs-parent="#accordionExam">
+                            <div class="accordion-body">The final exam is from 1pm until 3pm</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Where is the final exam?</button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="Location" data-bs-parent="#accordionExam">
+                            <div class="accordion-body">The final exam is in IO240, but for me it will be taken remotely</div>
+                        </div>
+                    </div>
+                </div>
+                <div type="button" class="btn question" data-bs-toggle="modal" data-bs-target="#questionModal" style="width:100%; margin:auto; height: 50px; background-color:#2d0fd5; text-align:center; border: 2px solid #000F5D; color: white; margin-top: 25px; padding: 10px;">Is the final exam in person? Click me to find out!</div>
+                <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="questionModalLabel">Final exam format</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>The final exam is to be taken in person. In my case, however, I will be taking it remotely as I am an online student.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div type="button" class="btn question2" data-bs-toggle="modal" data-bs-target="#questionModal2" style="width:100%; margin:auto; height: 50px; background-color:#2d0fd5; text-align:center; border: 2px solid #000F5D; color: white; margin-top: 25px; margin-bottom: 25px; padding: 10px;">When is the final project due? Click me to find out!</div>
+                <div class="modal fade" id="questionModal2" tabindex="-1" aria-labelledby="questionModalLabel2" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="questionModalLabel2">Final project</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>The final project is due on April 29th.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-lg-6 col-md-12">
+                <div style="width: 100%; height: 30px; background-color:#2d0fd5; font-size: large; text-align:center; border: 2px solid #000F5D; color: white">Final Exam Information (click me!)</div>
+                <img src="./assets/final.jpg" type="button" class="btn final" data-bs-toggle="modal" data-bs-target="#finalModal" style="margin:auto; width: 100%; height: 70%;">
+                <div class="modal fade" id="finalModal" tabindex="-1" aria-labelledby="finalModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="finalModalLabel">Final Exam</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>This image provides an example of the sort of info that needs to be included within the final project.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-lg-6 col-md-12">
+                <div style="width: 100%; height: 30px; background-color:#2d0fd5; font-size: large; text-align:center; border: 2px solid #000F5D; color: white">Final Exam Requirements (click me!)</div>
+                <img src="./assets/final2.jpg" type="button" class="btn final2" data-bs-toggle="modal" data-bs-target="#finalModal2" style="margin:auto; width: 100%; height: 80%;">
+                <div class="modal fade" id="finalModal2" tabindex="-1" aria-labelledby="finalModalLabel2" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="finalModalLabel2">Final Exam</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>This image provides an outline and information on what needs to be included within the final project.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
